@@ -611,11 +611,508 @@
             text-decoration: underline
         }
 
+
+        /* About redesign */
+        .about-shell {
+            background: #2f2730;
+            border-radius: 28px;
+            padding: 48px;
+            color: #fff;
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 34px;
+            align-items: stretch;
+            box-shadow: 0 18px 50px rgba(70, 35, 55, .14)
+        }
+
+        .about-intro {
+            padding: 10px 8px 10px 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .about-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            width: fit-content;
+            border: 1px solid rgba(255, 255, 255, .18);
+            background: rgba(255, 255, 255, .07);
+            color: #f8d9e7;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: .04em;
+            margin-bottom: 22px
+        }
+
+        .about-label i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #eaa0bf
+        }
+
+        .about-intro h2 {
+            color: #fff;
+            font-size: clamp(30px, 4vw, 46px);
+            max-width: 620px;
+            margin-bottom: 18px;
+            letter-spacing: -.025em
+        }
+
+        .about-intro h2 em {
+            color: #eaa0bf;
+            font-style: normal
+        }
+
+        .about-intro p {
+            color: #d9cdd5;
+            max-width: 600px;
+            margin: 0;
+            font-size: 16px
+        }
+
+        .about-mini {
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .about-mini span {
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: rgba(255, 255, 255, .055);
+            color: #f5e8ef;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 12.5px
+        }
+
+        .about-panel {
+            background: #fff;
+            border-radius: 22px;
+            padding: 26px;
+            color: var(--ink);
+            display: flex;
+            flex-direction: column;
+            gap: 12px
+        }
+
+        .about-panel-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4px
+        }
+
+        .about-panel-head h3 {
+            margin: 0;
+            font-size: 20px
+        }
+
+        .about-panel-head span {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--rose-t);
+            font-size: 11px
+        }
+
+        .about-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: #fffafa
+        }
+
+        .about-card-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 11px;
+            background: var(--blush);
+            color: #8a3a63;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 13px
+        }
+
+        .about-card b {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 2px
+        }
+
+        .about-card small {
+            color: var(--mute);
+            font-size: 12.5px
+        }
+
+        .about-stats {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px
+        }
+
+        .about-stat {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 16px
+        }
+
+        .about-stat strong {
+            display: block;
+            font-size: 25px;
+            line-height: 1;
+            color: var(--rose-d);
+            margin-bottom: 7px
+        }
+
+        .about-stat span {
+            color: var(--mute);
+            font-size: 12px
+        }
+
+        .edu-heading {
+            margin: 54px 0 18px;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 16px
+        }
+
+        .edu-heading h3 {
+            margin: 0;
+            font-size: 25px
+        }
+
+        .edu-heading span {
+            color: var(--mute);
+            font-size: 13px
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .edu-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 20px;
+            min-height: 145px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .edu-card::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            right: -28px;
+            bottom: -28px;
+            background: var(--blush)
+        }
+
+        .edu-card time {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--rose-t);
+            font-size: 11.5px
+        }
+
+        .edu-card b {
+            display: block;
+            font-size: 15px;
+            line-height: 1.35;
+            margin: 10px 0 5px;
+            max-width: 190px
+        }
+
+        .edu-card span {
+            color: var(--mute);
+            font-size: 12.5px
+        }
+
+        @media(max-width:960px) {
+            .about-shell {
+                grid-template-columns: 1fr;
+                padding: 34px
+            }
+
+            .about-stats,
+            .edu-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:680px) {
+            .about-shell {
+                padding: 24px;
+                border-radius: 22px
+            }
+
+            .about-stats,
+            .edu-grid {
+                grid-template-columns: 1fr
+            }
+
+            .edu-heading {
+                display: block
+            }
+
+            .edu-heading span {
+                display: block;
+                margin-top: 5px
+            }
+        }
+
+
+        /* Contact redesign */
         .contact {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 32px;
-            align-items: start
+            grid-template-columns: 1.05fr .95fr;
+            gap: 34px;
+            align-items: stretch
+        }
+
+        .contact.card-c {
+            background: #2f2730;
+            border: 0;
+            border-radius: 28px;
+            padding: 48px;
+            color: #fff;
+            box-shadow: 0 18px 50px rgba(70, 35, 55, .14)
+        }
+
+        .contact-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 8px 4px
+        }
+
+        .contact-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            width: fit-content;
+            border: 1px solid rgba(255, 255, 255, .18);
+            background: rgba(255, 255, 255, .07);
+            color: #f8d9e7;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: .04em;
+            margin-bottom: 24px
+        }
+
+        .contact-label i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #eaa0bf
+        }
+
+        .contact-main h2 {
+            color: #fff;
+            font-size: clamp(34px, 4.3vw, 54px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+            letter-spacing: -.025em
+        }
+
+        .contact-main p {
+            color: #d9cdd5;
+            max-width: 610px;
+            margin: 0 0 28px;
+            font-size: 16px
+        }
+
+        .contact-cta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 28px
+        }
+
+        .contact-cta .btn {
+            background: #fff;
+            color: #352a32;
+            border-color: #fff
+        }
+
+        .contact-cta .btn:hover {
+            background: #f7e4ec;
+            color: #352a32
+        }
+
+        .contact-cta .btn.ghost {
+            color: #fff;
+            border-color: rgba(255, 255, 255, .24);
+            background: transparent
+        }
+
+        .contact-cta .btn.ghost:hover {
+            background: rgba(255, 255, 255, .08);
+            color: #fff
+        }
+
+        .contact-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #dccfd7;
+            font-size: 14px
+        }
+
+        .contact-status i {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #65d6a2;
+            box-shadow: 0 0 0 6px rgba(101, 214, 162, .12)
+        }
+
+        .contact-side {
+            background: #fff;
+            color: var(--ink);
+            border-radius: 22px;
+            padding: 34px;
+            display: flex;
+            flex-direction: column
+        }
+
+        .contact-side h3 {
+            margin: 0 0 4px;
+            font-size: 21px
+        }
+
+        .contact-side>p {
+            color: var(--mute);
+            margin: 0 0 20px;
+            font-size: 14px
+        }
+
+        .social-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .social-box {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            border-radius: 15px;
+            padding: 14px 16px;
+            color: #fff;
+        }
+
+        .social-box:hover {
+            color: #fff;
+            transform: translateY(-2px);
+            filter: brightness(1.04)
+        }
+
+        .social-box.github {
+            background: #242126
+        }
+
+        .social-box.linkedin {
+            background: #7b4c72
+        }
+
+        .social-box.email {
+            background: #b9557f
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .15);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            line-height: 0;
+        }
+
+        .social-icon svg {
+            width: 21px;
+            height: 21px;
+            display: block;
+            fill: currentColor;
+        }
+
+        .social-box strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 1px
+        }
+
+        .social-box>span:not(.social-icon) {
+            display: block;
+            font-size: 12px;
+            opacity: .82;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .contact-now {
+            margin-top: 14px;
+            background: #f8e8ef;
+            border: 1px solid #efd5e1;
+            border-radius: 15px;
+            padding: 16px;
+            color: var(--ink)
+        }
+
+        .contact-now b {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--rose-t);
+            font-size: 11px;
+            letter-spacing: .08em;
+            margin-bottom: 6px
+        }
+
+        .contact-now p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.55;
+            color: #6f5665
+        }
+
+        @media(max-width:960px) {
+            .contact {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(max-width:680px) {
+            .contact.card-c {
+                padding: 24px;
+                border-radius: 22px
+            }
+
+            .contact-side {
+                padding: 22px
+            }
         }
 
         .now {
@@ -721,74 +1218,144 @@
             padding: 48px
         }
 
+        /* Tech stack redesign */
+        #skills {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(500px 350px at 10% 25%, rgba(185, 85, 127, .16), transparent 70%),
+                radial-gradient(500px 350px at 90% 75%, rgba(185, 85, 127, .12), transparent 70%),
+                #2f2730;
+        }
+
+        #skills::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: .22;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+            background-size: 42px 42px;
+        }
+
+        #skills .wrap {
+            position: relative;
+            z-index: 1;
+        }
+
+        #skills h2 {
+            color: #fff;
+        }
+
+        #skills>.wrap>.sub {
+            color: #cdbfc8;
+        }
+
         .stack {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px
+            gap: 18px;
         }
 
         .stack-card {
-            background: var(--card);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 26px 28px;
-            box-shadow: 0 2px 12px rgba(120, 60, 90, .05)
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(145deg,
+                    rgba(255, 255, 255, .075),
+                    rgba(255, 255, 255, .025));
+            border: 1px solid rgba(255, 255, 255, .13);
+            border-radius: 22px;
+            padding: 26px;
+            box-shadow:
+                0 14px 40px rgba(0, 0, 0, .14),
+                inset 0 1px 0 rgba(255, 255, 255, .05);
+            backdrop-filter: blur(10px);
+            transition: transform .25s ease, border-color .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .stack-card::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            top: -110px;
+            right: -80px;
+            background: rgba(224, 85, 154, .10);
+            pointer-events: none;
+        }
+
+        .stack-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(234, 160, 191, .35);
+            box-shadow:
+                0 18px 46px rgba(0, 0, 0, .2),
+                0 0 0 1px rgba(234, 160, 191, .05);
         }
 
         .stack-card.wide {
-            grid-column: 1/-1
+            grid-column: 1 / -1;
         }
 
         .stack-head {
+            position: relative;
+            z-index: 1;
             display: flex;
             align-items: center;
             gap: 14px;
             padding-bottom: 18px;
             margin-bottom: 20px;
-            border-bottom: 1px dashed #e4c3d3
+            border-bottom: 1px solid rgba(255, 255, 255, .10);
         }
 
         .stack-ic {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: var(--blush);
-            color: #8a3a63;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(234, 160, 191, .11);
+            border: 1px solid rgba(234, 160, 191, .20);
+            color: #f0b8d0;
             display: grid;
             place-items: center;
             font-family: 'JetBrains Mono', monospace;
             font-size: 14px;
             font-weight: 500;
-            flex-shrink: 0
+            flex-shrink: 0;
         }
 
         .stack-head h3 {
             margin: 0;
+            color: #fff;
             font-size: 18px;
-            line-height: 1.2
+            line-height: 1.2;
         }
 
         .stack-head p {
-            margin: 2px 0 0;
-            font-size: 13.5px;
-            color: var(--mute)
+            margin: 3px 0 0;
+            color: #bfaeb9;
+            font-size: 13px;
         }
 
         .stack-count {
             margin-left: auto;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 12.5px;
-            color: var(--rose-t);
-            background: var(--blush);
-            border: 1px solid var(--line);
-            padding: 4px 10px;
-            border-radius: 999px
+            font-size: 11px;
+            color: #f0b8d0;
+            background: rgba(224, 85, 154, .10);
+            border: 1px solid rgba(224, 85, 154, .18);
+            padding: 5px 10px;
+            border-radius: 999px;
         }
 
         .badges {
+            position: relative;
+            z-index: 1;
             display: flex;
             flex-wrap: wrap;
-            gap: 10px
+            gap: 10px;
         }
 
         .badges img {
@@ -796,11 +1363,38 @@
             width: auto;
             display: block;
             border-radius: 4px;
-            transition: transform .2s
+            transition: transform .2s ease, filter .2s ease;
         }
 
         .badges img:hover {
-            transform: translateY(-2px)
+            transform: translateY(-3px) scale(1.02);
+            filter: brightness(1.06);
+        }
+
+        @media(max-width:960px) {
+            .stack {
+                grid-template-columns: 1fr;
+            }
+
+            .stack-card.wide {
+                grid-column: auto;
+            }
+        }
+
+        @media(max-width:680px) {
+            .stack-card {
+                padding: 22px;
+                border-radius: 18px;
+            }
+
+            .stack-head {
+                align-items: flex-start;
+            }
+
+            .stack-count {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
         }
 
         @media(max-width:960px) {
@@ -1134,74 +1728,113 @@
                                 </svg>View on GitHub</a>
                         </div>
                     </article>
-                    <article class="proj">
-                        <div class="ph g3"></div>
-                        <div class="pb">
-                            <h3>Everything else</h3>
-                            <p>Browse all my repositories, including work in progress.</p><a class="gh"
-                                href="https://github.com/ShehaniKavindi" style="margin-top:auto"><svg width="18"
-                                    height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                                    <path
-                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-                                </svg>Visit GitHub</a>
-                        </div>
-                    </article>
                 </div>
             </div>
         </section>
 
         <section class="alt" id="about">
             <div class="wrap">
-                <div class="about">
-                    <div>
-                        <h2>I'm passionate about creating digital solutions</h2>
-                        <p class="sub" style="margin-bottom:0">I'm a BSc (Hons) Software Engineering student at
-                            Birmingham City University. I enjoy designing databases, building REST APIs and turning
-                            ideas into working apps, on my own and in teams.</p>
+                <div class="about-shell">
+                    <div class="about-intro">
+                        <div class="about-label"><i></i> A LITTLE ABOUT ME</div>
+                        <h2>I like turning ideas into <em>real, usable software.</em></h2>
+                        <p>I'm a BSc (Hons) Software Engineering student at Birmingham City University. I enjoy
+                            designing databases, building REST APIs and creating web and mobile apps that are practical,
+                            clean and easy to use.</p>
+                        <div class="about-mini">
+                            <span>Full-stack development</span><span>REST APIs</span><span>Database
+                                design</span><span>Web + Mobile</span>
+                        </div>
                     </div>
-                    <div class="stats">
-                        <div class="stat"><i>5</i>
-                            <div><b>Projects</b><small>built end to end</small></div>
+                    <div class="about-panel">
+                        <div class="about-panel-head">
+                            <h3>What I enjoy building</h3><span>01 — 04</span>
                         </div>
-                        <div class="stat"><i>7</i>
-                            <div><b>Languages &amp; markup</b><small>Java, PHP, JS, TS, HTML, CSS, SQL</small></div>
+                        <div class="about-card">
+                            <div class="about-card-icon">API</div>
+                            <div><b>Backend &amp; APIs</b><small>Java REST APIs, PHP backends and clean data
+                                    flows.</small></div>
                         </div>
-                        <div class="stat"><i>3</i>
-                            <div><b>Platforms</b><small>web, mobile, REST APIs</small></div>
+                        <div class="about-card">
+                            <div class="about-card-icon">DB</div>
+                            <div><b>Databases</b><small>MySQL, ERDs, normalization and structured data.</small></div>
                         </div>
-                        <div class="stat"><i>24</i>
-                            <div><b>Since 2024</b><small>BSc in progress</small></div>
+                        <div class="about-card">
+                            <div class="about-card-icon">UI</div>
+                            <div><b>Web &amp; mobile UI</b><small>Responsive web apps and React Native
+                                    experiences.</small></div>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon">DEV</div>
+                            <div><b>Learning by building</b><small>Independent projects, teamwork and continuous
+                                    improvement.</small></div>
                         </div>
                     </div>
                 </div>
-                <h3 class="ed">Education</h3>
-                <ol class="tl">
-                    <li><time>2024 - present</time><b>BSc (Hons) Software Engineering</b><span>Birmingham City
-                            University</span></li>
-                    <li><time>2023</time><b>GCE Advanced Level</b><span>Physical Science stream</span></li>
-                    <li><time>2021 - 2022</time><b>Diploma in Information Technology</b><span>IMBS Green Campus</span>
-                    </li>
-                    <li><time>2020</time><b>GCE Ordinary Level</b><span>6A, 2B, 1C</span></li>
-                </ol>
+
+
+                <div class="edu-heading">
+                    <h3>Education</h3><span>A few milestones along the way</span>
+                </div>
+                <div class="edu-grid">
+                    <div class="edu-card"><time>2024 — PRESENT</time><b>BSc (Hons) Software
+                            Engineering</b><span>Birmingham City University</span></div>
+                    <div class="edu-card"><time>2023</time><b>GCE Advanced Level</b><span>Physical Science stream -
+                            3S</span>
+                    </div>
+                    <div class="edu-card"><time>2021 — 2022</time><b>Diploma in Information Technology</b><span>IMBS
+                            Green Campus</span></div>
+                    <div class="edu-card"><time>2020</time><b>GCE Ordinary Level</b><span>6A, 2B, 1C</span></div>
+                </div>
             </div>
         </section>
 
         <section id="contact">
             <div class="wrap">
                 <div class="contact card-c">
-                    <div>
-                        <h2>Have a project in mind?</h2>
-                        <p class="sub">I'm open to internships and open-source collaboration.</p>
-                        <a class="btn" href="mailto:shehanikavindi2005@gmail.com">Get in touch</a>
+                    <div class="contact-main">
+                        <div class="contact-label"><i></i> LET'S CONNECT</div>
+                        <h2>Have an idea,<br>internship or project<br>to talk about?</h2>
+                        <p>I'm open to internships, collaborative projects and open-source work. If you're building
+                            something interesting, I'd love to hear about it.</p>
+                        <div class="contact-cta">
+                            <a class="btn" href="mailto:shehanikavindi2005@gmail.com">Get in touch ↗</a>
+                            <a class="btn ghost" href="https://www.linkedin.com/in/shehani-kavindi-4627b5242/">Connect
+                                on LinkedIn</a>
+                        </div>
+                        <div class="contact-status"><i></i> Currently open to internship opportunities</div>
                     </div>
-                    <div class="now"><b>Right now</b>
-                        <p>Building a habit tracker with React Native and Expo.</p>
-                        <p>Learning TypeScript, Expo Router and modern mobile development.</p>
-                    </div>
-                    <div class="links"><b>Find me online</b>
-                        <a href="https://github.com/ShehaniKavindi">github.com/ShehaniKavindi</a>
-                        <a href="https://www.linkedin.com/in/shehani-kavindi-4627b5242/">LinkedIn</a>
-                        <a href="mailto:shehanikavindi2005@gmail.com">shehanikavindi2005@gmail.com</a>
+                    <div class="contact-side">
+                        <h3>Find me online</h3>
+                        <p>The easiest ways to reach me.</p>
+                        <div class="social-boxes">
+                            <a class="social-box github" href="https://github.com/ShehaniKavindi">
+                                <span class="social-icon"><svg viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                    </svg></span>
+                                <span><strong>GitHub</strong><span>github.com/ShehaniKavindi</span></span>
+                            </a>
+                            <a class="social-box linkedin"
+                                href="https://www.linkedin.com/in/shehani-kavindi-4627b5242/">
+                                <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.35 4.24 5.4v6.35ZM5.33 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM3.55 20.45h3.57V8.99H3.55v11.46Z" />
+                                    </svg></span>
+                                <span><strong>LinkedIn</strong><span>Connect professionally</span></span>
+                            </a>
+                            <a class="social-box email" href="mailto:shehanikavindi2005@gmail.com">
+                                <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z" />
+                                    </svg></span>
+                                <span><strong>Email</strong><span>shehanikavindi2005@gmail.com</span></span>
+                            </a>
+                        </div>
+                        <div class="contact-now"><b>RIGHT NOW</b>
+                            <p>Building with React Native + Expo and learning more about TypeScript and modern mobile
+                                development.</p>
+                        </div>
                     </div>
                 </div>
             </div>
