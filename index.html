@@ -2353,7 +2353,9 @@
         var ls = [].slice.call(n.querySelectorAll('a'));
         var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { ls.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id) }) } }) }, { rootMargin: '-40% 0px -55% 0px' });
         ['home', 'about', 'skills', 'projects', 'contact'].forEach(function (id) { io.observe(document.getElementById(id)) });
+        
         var themeToggle = document.getElementById('theme-toggle');
+        
         function setTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
             var isDark = theme === 'dark';
@@ -2361,7 +2363,7 @@
             themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
             themeToggle.setAttribute('aria-pressed', isDark);
         }
-        setTheme(localStorage.getItem('portfolio-theme') || 'light');
+        setTheme(localStorage.getItem('portfolio-theme') || 'dark');
         themeToggle.addEventListener('click', function () {
             var nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             localStorage.setItem('portfolio-theme', nextTheme);
